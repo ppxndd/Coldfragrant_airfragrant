@@ -1,0 +1,262 @@
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #FEF9F2, #D4F6FF);
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  box-sizing: border-box; /* เพิ่ม box-sizing เพื่อให้ padding ไม่กระทบกับความสูงของ element */
+}
+.title {
+  font-size: 2rem;
+  color: #D87A7A;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.sentenceList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%; /* เพิ่มความกว้างเต็มที่ */
+}
+
+.sentenceButton {
+  padding: 10px 20px;
+  border: 2px solid #FFE3E3;
+  background-color: #FEF9F2;
+  color: #333;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  flex: 1 1 45%; /* ทำให้ปุ่มสามารถยืดหดตามขนาดหน้าจอ */
+}
+
+.sentenceButton:hover {
+  background-color: #FFE3E3;
+  color: #000;
+}
+
+.selected {
+  background-color: #D87A7A;
+  color: white;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* ทำให้ปุ่มยืดหดตามขนาดหน้าจอ */
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 30px; /* เพิ่ม margin ให้กับปุ่ม */
+}
+
+.submitButton, .backButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  flex: 1 1 45%; /* เพิ่มความยืดหด */
+}
+
+.submitButton {
+  background-color: #D87A7A;
+  color: white;
+}
+
+.backButton {
+  background-color: #D4F6FF;
+  color: #333;
+}
+
+.submitButton:hover {
+  background-color: #B06E6E;
+}
+
+.backButton:hover {
+  background-color: #A3D3E5;
+}
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background: white;
+  border-radius: 16px;
+  width: 60vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.productContent {
+  flex: 1;
+  display: flex;
+}
+
+.popupLeft {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f8ff; /* สีฟ้าอ่อน */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-top-left-radius: 16px;
+}
+
+.popupRight {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffe4e1; /* สีชมพูอ่อน */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 16px;
+}
+
+.resultImage {
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.promotionImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.closeContainer {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.closeButton {
+  background-color: #d87a7a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: #b06e6e;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #6B7280;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  z-index: 1000;
+  width: calc(100% - 20px);
+  text-align: center;
+  margin-top: 20px; /* เพิ่ม margin-top เพื่อขยับหมายเหตุลง */
+}
+
+
+/* สำหรับหน้าจอเล็ก */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .elementHighlight {
+    font-size: 1.8rem;
+  }
+
+  .healthIssues {
+    font-size: 0.9rem;
+  }
+
+  .image {
+    max-width: 100%; /* ลดขนาดภาพให้พอดีกับหน้าจอ */
+    height: auto; /* ปรับความสูงอัตโนมัติ */
+  }
+
+  .promotionImage {
+    max-width: 100%; /* ลดขนาดโปรโมชันให้พอดีกับหน้าจอ */
+    height: auto;
+  }
+
+  .promotion {
+    font-size: 1.2rem; /* ลดขนาดฟอนต์ของโปรโมชัน */
+  }
+
+  .quote {
+    font-size: 0.9rem; /* ลดขนาดฟอนต์ของคำคม */
+    padding: 8px;
+  }
+
+  .button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* สำหรับหน้าจอใหญ่ */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 800px; /* ขยายพื้นที่สำหรับหน้าจอใหญ่ */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .elementHighlight {
+    font-size: 2.5rem;
+  }
+
+  .image {
+    max-width: 70%; /* ลดขนาดภาพเล็กน้อยให้ดูสมดุล */
+  }
+
+  .promotionImage {
+    max-width: 80%; /* ลดขนาดโปรโมชัน */
+  }
+
+  .promotion {
+    font-size: 1.8rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+}

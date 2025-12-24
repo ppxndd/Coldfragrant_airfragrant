@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fef9f2; /* สีพื้นหลังหลัก */
+    margin: 0;
+}
+
+.contentBox {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.productName {
+    font-size: 2rem;
+    font-weight: bold;
+    /* color: #ffe3e3; สีหลัก */
+    color: #9f7154;
+    margin-bottom: 10px;
+}
+
+.subText {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #d4f6ff; /* สีกรอบ */
+    border-radius: 8px;
+    background-color: #fef9f2; /* สีพื้นหลัง */
+}
+
+.input:focus {
+    outline: none;
+    border-color: #ffe3e3; /* สีเมื่อโฟกัส */
+    box-shadow: 0 0 4px #ffe3e3;
+}
+
+.error {
+    font-size: 0.8rem;
+    color: #ff6b6b; /* สีข้อความ error */
+    margin-top: -10px;
+}
+
+.button {
+    background-color: #d4f6ff; /* สีปุ่ม */
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffe3e3; /* สีปุ่มเมื่อ hover */
+    color: #fff;
+}
+
+/* เปลี่ยนสีพื้นหลังและขอบของ input วันที่ */
+.input[type="date"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #d4f6ff;
+    border-radius: 8px;
+    background-color: #fef9f2;
+    color: #333;
+}
+
+/* สีของวันที่ใน input เมื่อโฟกัส */
+.input[type="date"]:focus {
+    outline: none;
+    border-color: #ffe3e3;
+    box-shadow: 0 0 4px #ffe3e3;
+}
+
+/* เปลี่ยนสีไอคอนปฏิทิน */
+.input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #d4f6ff;  /* ไอคอนปฏิทิน */
+}

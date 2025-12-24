@@ -1,0 +1,208 @@
+.container {
+    background-color: #fef9f2;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* สีสำหรับ title แต่ละธาตุ */
+  .titleVata {
+    color: #4caf50; /* สีเขียวอ่อนสำหรับวาตะ */
+  }
+  
+  .titleSemha {
+    color: #2196f3; /* สีฟ้าสำหรับเสมหะ */
+  }
+  
+  .titlePitta {
+    color: #f44336; /* สีแดงสำหรับปิตตะ */
+  }
+
+  .elementHighlight {
+    color: #d9534f; /* สีแดงเข้ม ให้เด่น */
+    font-size: 2rem; /* ขนาดใหญ่กว่า */
+    font-weight: bold; /* ตัวหนา */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูโดดเด่น */
+  }
+
+  .healthIssues {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+.image {
+  display: block;
+  max-width: 80%; /* ลดขนาดลงเล็กน้อย */
+  height: 50vh;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: 2px solid #ffe3e3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเล็กน้อยให้ดูมีมิติ */
+  padding: clamp(6px, 1.5vw, 10px);
+}
+
+.promotionImage {
+    display: block;
+    max-width: 90%; /* ลดขนาดลงอีกนิดเพื่อสมดุล */
+    height: auto;
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 2px solid #ffe3e3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+.promotion {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* สีสำหรับแต่ละธาตุ */
+.promotionVata {
+    color: #4caf50; /* สีเขียวอ่อนสำหรับวาตะ */
+  }
+  
+  .promotionSemha {
+    color: #2196f3; /* สีฟ้าสำหรับเสมหะ */
+  }
+  
+  .promotionPitta {
+    color: #f44336; /* สีแดงสำหรับปิตตะ */
+  }
+  
+  .quote {
+    font-style: italic;
+    text-align: center;
+    background-color: #ffe3e3;
+    padding: 10px;
+    border-radius: 8px;
+    color: #333;
+  }
+  
+  .button {
+    display: block;
+    background-color: #d4f6ff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 20px auto;
+    text-align: center;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #ffe3e3;
+  }
+  
+.qrContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qrText {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.qrImage {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+  /* สำหรับหน้าจอเล็ก */
+@media (max-width: 600px) {
+    .container {
+      padding: 15px;
+      max-width: 90%;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .elementHighlight {
+      font-size: 1.8rem;
+    }
+  
+    .healthIssues {
+      font-size: 0.9rem;
+    }
+  
+    .image {
+      max-width: 100%; /* ลดขนาดภาพให้พอดีกับหน้าจอ */
+      height: auto; /* ปรับความสูงอัตโนมัติ */
+    }
+  
+    .promotionImage {
+      max-width: 100%; /* ลดขนาดโปรโมชันให้พอดีกับหน้าจอ */
+      height: auto;
+    }
+  
+    .promotion {
+      font-size: 1.2rem; /* ลดขนาดฟอนต์ของโปรโมชัน */
+    }
+  
+    .quote {
+      font-size: 0.9rem; /* ลดขนาดฟอนต์ของคำคม */
+      padding: 8px;
+    }
+  
+    .button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* สำหรับหน้าจอใหญ่ */
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 800px; /* ขยายพื้นที่สำหรับหน้าจอใหญ่ */
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .elementHighlight {
+      font-size: 2.5rem;
+    }
+  
+    .image {
+      max-width: 70%; /* ลดขนาดภาพเล็กน้อยให้ดูสมดุล */
+    }
+  
+    .promotionImage {
+      max-width: 80%; /* ลดขนาดโปรโมชัน */
+    }
+  
+    .promotion {
+      font-size: 1.8rem;
+    }
+  
+    .quote {
+      font-size: 1rem;
+    }
+  }
